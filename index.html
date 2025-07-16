@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HAPPY BIRTHDAY!!!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro-screen">
+        <button id="start-button">Click to Celebrate 🎉</button>
+    </div>
+
+    <div id="graffiti-screen">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTNod29haXA1cGVkNHg5cGUyNTZnYW55OXlocGd2MTM0dHV2aGg5cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fk7dcmt3TwgZm0ZE8c/giphy.gif" alt="Graffiti celebration">
+    </div>
+
+    <div id="main-content">
+
+        <div class="main">
+            <h1>Today is Carmen's birthday 🥳🥳</h1>
+            <img id="img01" src="images/bdaypic3.jpg" alt="A beautiful picture">
+            <h2 class="bday-age">22 years old</h2>
+            <h4 class="bday-date">22/07/2025</h4>
+        </div>
+
+        <div class="gift-wrapper">
+            <h2>Here's how happy I am for you today</h2>
+            <h3>(Hover over or click the gift)</h3>
+            <div class="gift" id="happy-img"></div>
+        </div>
+        <div class="gift-wrapper">
+            <h2>How people react when you enter the room</h2>
+            <div class="gift" id="hot-img"></div>
+        </div>
+        <div class="gift-wrapper">
+            <h2>If I had to describe you in one word</h2>
+            <div class="gift" id="smart-img"></div>
+        </div>
+        <div class="gift-wrapper">
+            <h2>Hope you have an amazing year!!!</h2>
+            <div class="gift" id="badass-img"></div>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById("start-button");
+        const introScreen = document.getElementById("intro-screen");
+        const graffitiScreen = document.getElementById("graffiti-screen");
+        const mainContent = document.getElementById("main-content");
+
+        startButton.addEventListener("click", () => {
+            introScreen.style.display = "none";
+            graffitiScreen.style.display = "flex";
+            setTimeout(() => {
+                graffitiScreen.style.display = "none";
+                mainContent.style.display = "block";
+            }, 30000);
+        });
+    </script>
+</body>
+</html>
